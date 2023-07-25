@@ -16,7 +16,8 @@ def cart(request):
     
     else:
         items = []
-    return render(request,'store/cart.html',{'items':items})
+        order = {'get_cart_total':0 , 'get_cart_items':0}
+    return render(request,'store/cart.html',{'items':items , 'order':order})
 
 
 def checkout(request):
